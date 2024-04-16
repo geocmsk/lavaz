@@ -1,41 +1,41 @@
-# Lava Auto Commit
+# Lav Otomatik Taahhüdü
 
-This repository contains a GitHub Actions workflow for automatically fetching data from multiple blockchain networks (Ethereum, NEAR, StarkNet, and Axelar) and committing the changes to the repository.
+Bu depo, birden fazla blockchain ağından (Ethereum, NEAR, StarkNet ve Axelar) verileri otomatik olarak almak ve değişiklikleri depoya uygulamak için bir GitHub Eylemleri iş akışı içerir.
 
-## Usage
+## Kullanım
 
-### Get Started
+### Başlamak
 
-To use this workflow, follow these steps:
+Bu iş akışını kullanmak için şu adımları izleyin:
 
-1. **Use this template**: Click on the "Use this template" button on the GitHub repository page to create a new repository based on this template.
+1. **Bu şablonu kullanın**: Bu şablonu temel alan yeni bir depo oluşturmak için GitHub deposu sayfasındaki "Bu şablonu kullan" düğmesini tıklayın.
 
-2. **Name your repository**: Give your new repository a name of your choice.
+2. **Deponuzu adlandırın**: Yeni deponuza istediğiniz bir ad verin.
 
-3. **Configure workflow**: After creating the repository, navigate to the Actions tab and click on "Set up a workflow yourself". Copy and paste the content of the `main.yml` file from this repository into the editor.
+3. **İş akışını yapılandırın**: Depoyu oluşturduktan sonra Eylemler sekmesine gidin ve "Kendiniz bir iş akışı ayarlayın" seçeneğini tıklayın. 'main.yml' dosyasının içeriğini bu depodan kopyalayıp düzenleyiciye yapıştırın.
 
-4. **Set user email and name**: Update the `GIT_USER_EMAIL` and `GIT_USER_NAME` environment variables in the workflow file (`main.yml`) to reflect your GitHub account details.
+4. **Kullanıcı e-postasını ve adını ayarlayın**: İş akışı dosyasındaki ("main.yml") "GIT_USER_EMAIL" ve "GIT_USER_NAME" ortam değişkenlerini GitHub hesap ayrıntılarınızı yansıtacak şekilde güncelleyin.
 
-5. **Update RPC URLs**: Update the RPC URLs in each script file (`ethereum.sh`, `near.sh`, `starknet.sh`, and `axelar.sh`) with the corresponding URLs of your blockchain networks.
+5. **RPC URL'lerini güncelleyin**: Her komut dosyasındaki (`ethereum.sh`, `near.sh`, `starknet.sh` ve `axelar.sh`) RPC URL'lerini, sunucunuzun karşılık gelen URL'leriyle güncelleyin. Blockchain ağları.
 
-6. **Run the workflow**: The workflow is triggered automatically on a schedule (every 15-20 minutes) and can also be manually triggered from the GitHub UI.
+6. **İş akışını çalıştırın**: İş akışı belirli bir programa göre (her 15-20 dakikada bir) otomatik olarak tetiklenir ve ayrıca GitHub kullanıcı arayüzünden manuel olarak da tetiklenebilir.
 
-### Manual Trigger
+### Manuel Tetikleyici
 
-You can manually trigger the workflow from the GitHub UI by selecting the "Run workflow" option.
+"İş akışını çalıştır" seçeneğini seçerek iş akışını GitHub kullanıcı arayüzünden manuel olarak tetikleyebilirsiniz.
 
-## Files
+## Dosyalar
 
-- **ethereum.sh**: Script to fetch data from the Ethereum network.
-- **near.sh**: Script to fetch data from the NEAR network.
-- **starknet.sh**: Script to fetch data from the StarkNet network.
-- **axelar.sh**: Script to fetch data from the Axelar network.
+- **ethereum.sh**: Ethereum ağından veri getirmeye yönelik komut dosyası.
+- **near.sh**: NEAR ağından veri getirmeye yönelik komut dosyası.
+- **starknet.sh**: StarkNet ağından veri getirmeye yönelik komut dosyası.
+- **axelar.sh**: Axelar ağından veri getirmeye yönelik komut dosyası.
 
-## Workflow
+## İş Akışı
 
-The workflow consists of multiple jobs, each corresponding to a different blockchain network. The jobs are executed sequentially, with each job depending on the completion of the previous job.
+İş akışı, her biri farklı bir blockchain ağına karşılık gelen birden fazla işten oluşur. İşler sırayla yürütülür; her iş, bir önceki işin tamamlanmasına bağlıdır.
 
-- **ethereum_auto_commit**: Fetches data from the Ethereum network and commits the changes to the repository.
-- **near_auto_commit**: Fetches data from the NEAR network and commits the changes to the repository.
-- **starknet_auto_commit**: Fetches data from the StarkNet network and commits the changes to the repository.
-- **axelar_auto_commit**: Fetches data from the Axelar network and commits the changes to the repository.
+- **ethereum_auto_commit**: Ethereum ağından veri getirir ve değişiklikleri depoya kaydeder.
+- **near_auto_commit**: NEAR ağından veri getirir ve değişiklikleri depoya kaydeder.
+- **starknet_auto_commit**: StarkNet ağından verileri getirir ve değişiklikleri depoya kaydeder.
+- **axelar_auto_commit**: Axelar ağından veri getirir ve değişiklikleri depoya kaydeder.
