@@ -1,4 +1,4 @@
-# Lav Otomatik Taahhüdü
+# Lava Otomatik Taahhüdü
 
 Bu depo, birden fazla blockchain ağından (Ethereum, NEAR, StarkNet ve Axelar) verileri otomatik olarak almak ve değişiklikleri depoya uygulamak için bir GitHub Eylemleri iş akışı içerir.
 
